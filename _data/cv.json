@@ -1,0 +1,154 @@
+{
+  "basics": {
+    "name": "Tero Teelahti",
+    "label": "Experienced software architect & CTO",
+    "phone": "+358 40 562 2455",
+    "email": "tero@teelahti.fi",
+    "website": "http://tero.teelahti.fi",
+    "summary": "",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "teelahti",
+        "url": "https://github.com/teelahti"
+      },
+      {
+        "network": "Twitter",
+        "username": "teelahti",
+        "url": "https://twitter.com/teelahti"
+      },
+      {
+        "network": "Linkedin",
+        "username": "teroteelahti",
+        "url": "https://fi.linkedin.com/in/teroteelahti"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Armada Interactive",
+      "position": "CTO, co-founder",
+      "website": "https://armadainteractive.com",
+      "startDate": "2015-11-01",
+      "highlights": [],
+      "endDate": "",
+      "summary": "Building a new AAA mobile gaming company from scratch. Deeply involved and part of development team in Game technology (backend, frontend), game deployment pipeline, analytics, security, office infrastructure, vendor selection and management, recruiting. The primary technology stack for Armada Interactive's first game is Unity, Google Cloud, Kubernetes, Go, Elixir, C# (on .NET core), NodeJS, Datastore, BigQuery, Dataflow, and Redis."
+    },
+    {
+      "company": "Basware",
+      "position": "Chief architect",
+      "website": "https://www.basware.com",
+      "startDate": "2012-08-01",
+      "summary": "Designing Purchase to Pay (P2P) automation product family and its global cloud service based offering (multi-tenant, SaaS). Also involved in overall solution architecture, continuous deployment, development process, recruiting, and test automation activities.",
+      "highlights": [],
+      "endDate": "2015-12-01"
+    },
+    {
+      "company": "Avanade",
+      "position": "Manager",
+      "website": "https://www.avanade.com",
+      "startDate": "2010-12-01",
+      "endDate": "2012-08-01",
+      "summary": "Working as an architect in large software projects, supporting sales, helping development teams work smarter. Supported HR as a technical recruiter.",
+      "highlights": [
+        "2010-2012 worked as a chief architect in a large governmental application rewrite.",
+        "During 2012 worked as a program architect of a pension management system."
+      ]
+    },
+    {
+      "company": "Avanade",
+      "position": "Senior Consultant",
+      "website": "https://www.avanade.com",
+      "startDate": "2007-05-01",
+      "summary": "Working as an architect in large software projects, supporting sales, helping development teams work smarter. Supported HR as a technical recruiter. During 2007-2010 worked for government in one of the largest software projects in Finland. Started out as a UI lead developer, later advanced to chief architect position.",
+      "highlights": [],
+      "endDate": "2010-12-01"
+    },
+    {
+      "company": "VBS Net Oy",
+      "position": "Consultant",
+      "website": "",
+      "startDate": "1998-06-01",
+      "summary": "Worked as a consultant mainly on banking and financial sector. Worked with a small team on many projects that were truly greenfield and first of their kind (at least in Finland).",
+      "endDate": "2007-05-01",
+      "highlights": [
+        "Designing and building a rewards program for a credit card company from scratch.",
+        "Building self service portals for a credit card company",
+        "Building automatic processes and web sites for credit card holders to order custom credit cards with own images printed on them.",
+        "Involved in SaaS-based startups, e.g. in a financial administration system",
+        "Presales activies"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Helsingin kauppakorkeakoulu",
+      "area": "Economics",
+      "studyType": "M.Sc.",
+      "startDate": "1997-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2005-01-01"
+    },
+    {
+      "institution": "Lahden Yhteiskoulu",
+      "area": "Basic Studies",
+      "studyType": "Matriculation",
+      "startDate": "1992-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "1995-01-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Cloud Computing",
+      "level": "",
+      "keywords": [ "Kubernetes", "Azure", "Google Cloud Platform", "AWS", "SaaS" ]
+    },
+    {
+      "name": "Software Architecture",
+      "level": "",
+      "keywords": [ "Solution architecture", "Distributed systems", "Messaging", "SOA", "Microservices", "Continuous Integration", "Continuous Deployment", "Test Automation" ]
+    },
+    {
+      "name": "Software Development",
+      "level": "",
+      "keywords": ["Developer Coaching", "Agile Methodologies", "Offshoring", "Vendor Management", "Consulting", "Performance Tuning", ".NET", "C#", "Go", "Python", "Docker", "git"]
+    },
+    {
+      "name": "Web Development",
+      "level": "",
+      "keywords": ["JavaScript", "HTML", "CSS", "React", "Redux", "NodeJS", "ASP.NET"]
+    },
+    {
+      "name": "Databases",
+      "level": "",
+      "keywords": [ "Google Cloud Datastore", "Redis", "SQL Server", "Azure DocumentDB", "Azure Table Storage", "RavenDB"]
+    },
+    {
+      "name": "Public Speaking",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Recruiting",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "Finnish",
+      "fluency": "Native or bilingual proficiency"
+    },
+    {
+      "language": "English",
+      "fluency": "Full professional proficiency"
+    },
+    {
+      "language": "Swedish",
+      "fluency": "Limited working proficiency"
+    }
+  ]
+}
