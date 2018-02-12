@@ -8,8 +8,8 @@ steps:
 
 - name: jekyll/builder:3.7
   id: 'fix-permissions'
-  entrypoint: 'bash'
-  args: [ 'chown', '-R', 'jekyll:jekyll', '/workspace' ]
+  entrypoint: 'bin/chown'
+  args: [ '-R', 'jekyll:jekyll', '/workspace' ]
 
 - name: jekyll/builder:3.7
   id: 'build'
