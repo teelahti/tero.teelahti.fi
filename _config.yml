@@ -18,7 +18,7 @@ title: Tero Teelahti
 email: tero@teelahti.fi
 description: Tero Teelahti's personal blog. Mostly development posts with a slight web or gaming focus.
 baseurl: # the optional subpath of your site, e.g. "/blog"
-url: http://tero.teelahti.fi
+url: https://tero.teelahti.fi
 author:
   name: Tero Teelahti
   twitter: teelahti
