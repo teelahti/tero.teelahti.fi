@@ -7,16 +7,15 @@
 steps:
 
 - name: jekyll/builder:3.7
+  id: 'fix-permissions'
+  entrypoint: 'bash'
+  args: [ 'chown', '-R', 'jekyll:jekyll', '/workspace' ]
+
+- name: jekyll/builder:3.7
   id: 'build'
-  args: [ 'jekyll', 'build', '--source', '/workspace', '--destination', '/site' ]
-  volumes:
-    - name: 'site'
-      path: '/site'
+  args: [ 'jekyll', 'build' ]
 
 - name: devillex/docker-firebase
   id: 'deploy'
-  args: [ 'deploy', '--token', $_TOKEN, '-p', '/site' ]
-  volumes:
-    - name: 'site'
-      path: '/site'
+  args: [ 'deploy', '--token', $_TOKEN ]
 
