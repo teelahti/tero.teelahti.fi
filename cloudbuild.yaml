@@ -8,7 +8,7 @@ steps:
 
 - name: jekyll/builder:3.7
   id: 'build'
-  args: [ 'jekyll', 'build' ]
+  args: [ 'jekyll', 'build', '--source', '/workspace', '--destination', '/workspace/_site' ]
 
 - name: devillex/docker-firebase
   id: 'deploy'
