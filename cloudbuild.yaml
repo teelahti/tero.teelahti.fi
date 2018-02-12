@@ -17,5 +17,5 @@ steps:
 
 - name: devillex/docker-firebase
   id: 'deploy'
-  args: [ 'deploy', '--token', $_TOKEN ]
+  args: [ 'firebase', 'deploy', '--token', $_TOKEN ]
 
