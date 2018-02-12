@@ -1,2 +1,8 @@
 source "https://rubygems.org"
-gem "github-pages", group: :jekyll_plugins
+
+# gh-pages method
+# gem "github-pages", group: :jekyll_plugins
+
+# gem-based
+gem "jekyll"
+gem "jekyll-theme-basically-basic"
