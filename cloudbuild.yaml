@@ -8,7 +8,7 @@ steps:
 
 - name: jekyll/builder:3.7
   id: 'build'
-  args: [ 'jekyll', 'build', '--destination', '/site' ]
+  args: [ 'jekyll', 'build', '--source', '/workspace', '--destination', '/site' ]
   volumes:
     - name: 'site'
       path: '/site'
