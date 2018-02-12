@@ -11,7 +11,10 @@ See Makefile.
 
 ## Deploy to firebase
 
-Deployment is done with Google Cloud Container builder on each push, see cloudbuild.yaml for details. To build
-and deploy locally do
+Deployment is done with Google Cloud Container builder on each push, see cloudbuild.yaml for details. To set this up create
+a CI token with `firebase login:ci`, and set up a Cloud Container Builder job with that token.
+
+
+To build and deploy locally for test purposes do
 
     make deploy
