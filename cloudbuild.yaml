@@ -8,8 +8,15 @@ steps:
 
 - name: jekyll/builder:3.7
   id: 'build'
-  args: [ 'jekyll', 'build' ]
+  args: [ 'jekyll', 'build', '--destination', '/site' ]
+  volumes:
+    - name: 'site'
+      path: '/site'
 
 - name: devillex/docker-firebase
   id: 'deploy'
-  args: [ 'deploy', '--token', $_TOKEN ]
+  args: [ 'deploy', '--token', $_TOKEN, '-p', '/site' ]
+  volumes:
+    - name: 'site'
+      path: '/site'
+
