@@ -27,11 +27,20 @@
   "work": [
     {
       "company": "Armada Interactive",
+      "position": "CEO, co-founder",
+      "website": "https://armadainteractive.com",
+      "startDate": "2018-03-01",
+      "highlights": [],
+      "endDate": "",
+      "summary": "After a failed game took over the CEO role to streamline company back to rapid development mode. In addition to the CEO role I'm still actively involved in developmemt."
+    },
+    {
+      "company": "Armada Interactive",
       "position": "CTO, co-founder",
       "website": "https://armadainteractive.com",
       "startDate": "2015-11-01",
       "highlights": [],
-      "endDate": "",
+      "endDate": "2018-03-01",
       "summary": "Building a new AAA mobile gaming company from scratch. Deeply involved and part of development team in Game technology (backend, frontend), game deployment pipeline, analytics, security, office infrastructure, vendor selection and management, recruiting. The primary technology stack for Armada Interactive's first game is Unity, Google Cloud, Kubernetes, Go, Elixir, C# (on .NET core), NodeJS, Datastore, BigQuery, Dataflow, and Redis."
     },
     {
