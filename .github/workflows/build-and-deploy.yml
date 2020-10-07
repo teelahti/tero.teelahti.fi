@@ -6,22 +6,18 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        jekyll-image: ["jekyll/builder:4.1.0"]
-
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Fix permissions
-        uses: docker://${{ matrix.jekyll-image }}
+        uses: docker://jekyll/builder:4.1.0
         with:
           entrypoint: "/bin/chown"
           args: ["-R", "jekyll:jekyll", "$GITHUB_WORKSPACE"]
 
       - name: Build site
-        uses: docker://${{ matrix.jekyll-image }}
+        uses: docker://jekyll/builder:4.1.0
         with:
           args: ["jekyll", "build"]
 
