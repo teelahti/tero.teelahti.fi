@@ -5,17 +5,15 @@
 #     _TOKEN      The Firebase auth token from `firebase login:ci` command.
 
 steps:
+  - name: jekyll/builder:4.1.0
+    id: "fix-permissions"
+    entrypoint: "/bin/chown"
+    args: ["-R", "jekyll:jekyll", "/workspace"]
 
-- name: jekyll/builder:3.7
-  id: 'fix-permissions'
-  entrypoint: '/bin/chown'
-  args: [ '-R', 'jekyll:jekyll', '/workspace' ]
+  - name: jekyll/builder:4.1.0
+    id: "build"
+    args: ["jekyll", "build"]
 
-- name: jekyll/builder:3.7
-  id: 'build'
-  args: [ 'jekyll', 'build' ]
-
-- name: devillex/docker-firebase
-  id: 'deploy'
-  args: [ 'firebase', 'deploy', '--token', $_TOKEN ]
-
+  - name: devillex/docker-firebase
+    id: "deploy"
+    args: ["firebase", "deploy", "--token", $_TOKEN]
