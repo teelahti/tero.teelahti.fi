@@ -15,7 +15,7 @@ jobs:
         uses: docker://jekyll/builder:4.1.0
         with:
           entrypoint: "/bin/chown"
-          args: -R "jekyll:jekyll $GITHUB_WORKSPACE
+          args: -R jekyll:jekyll $GITHUB_WORKSPACE
 
       - name: Build site
         uses: docker://jekyll/builder:4.1.0
