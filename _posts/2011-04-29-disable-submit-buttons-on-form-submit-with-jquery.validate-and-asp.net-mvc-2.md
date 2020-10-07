@@ -2,7 +2,6 @@
 layout: post
 title: Disable submit buttons on form submit with jQuery.validate and ASP.NET MVC 2
 description: "I had a very common requirement to fill: when user clicks form submit button (or enter on keyboard) the button needs to be disabled in order to prevent double submits."
-permalink: /blog/disable-submit-buttons-on-form-submit-with-jquery.validate-and-asp.net-mvc-2
 disqus_identifier: disable-submit-buttons-on-form-submit-with-jquery.validate-and-asp.net-mvc-2
 modified: 
 tags: [mvc, ASP.NET, javascript, jquery]

@@ -2,19 +2,18 @@
 layout: post
 title: Selecting MVC action method based on any named form value
 description: "Route MVC form posts by form values to different action methods."
-permalink: /blog/selecting-mvc-action-method-based-on-any-named-form-value
 disqus_identifier: selecting-mvc-action-method-based-on-any-named-form-value
-modified: 
+modified:
 tags: [mvc, ASP.NET]
 comments: true
 share: true
 ---
 
-Yesterday [I blogged about using form button names to select action 
-methods](/blog/selecting-mvc-action-method-based-on-the-button-clicked) 
-on an ASP.NET MVC controller. After using that attribute for a 
-while I realized that I can make a generalization out of that: why 
-not use any form value in the action method selection process? 
+Yesterday [I blogged about using form button names to select action
+methods](/blog/selecting-mvc-action-method-based-on-the-button-clicked)
+on an ASP.NET MVC controller. After using that attribute for a
+while I realized that I can make a generalization out of that: why
+not use any form value in the action method selection process?
 This way I can avoid code like this:
 
 ```csharp
@@ -36,10 +35,10 @@ public ActionResult Fruit(SampleModel model) {
 }
 ```
 
-That is not too bad, but when more choices are introduced it gets worse 
-and worse (i.e. more if-then-else's). Solution for this is very similar 
-with the [ButtonAttribute approach](/blog/selecting-mvc-action-method-based-on-the-button-clicked): 
-introduce an attribute that takes form element name, and list of accepted values. If 
+That is not too bad, but when more choices are introduced it gets worse
+and worse (i.e. more if-then-else's). Solution for this is very similar
+with the [ButtonAttribute approach](/blog/selecting-mvc-action-method-based-on-the-button-clicked):
+introduce an attribute that takes form element name, and list of accepted values. If
 there is a match the action method is selected, otherwise the search continues. Usage example:
 
 ```csharp
@@ -49,7 +48,7 @@ there is a match the action method is selected, otherwise the search continues. 
 public ActionResult Apple(FormValueModel model)
 {
     // TODO: Validate and act on data, then redirect; this is just a sample
-    EatApples(model);    
+    EatApples(model);
     ViewBag.Message = "Selected: " + model.SelectedFruit;
     return View(model);
 }
@@ -69,12 +68,12 @@ public ActionResult PearOrOrange(FormValueModel model)
 Beware, that this method has two shortcomings:
 
 1. The order of attributes is very important. If you change it you very easily get a 404.
-2. There must be no ambiguity on selections or otherwise ASP.NET MVC will give you an error. 
-Usually this happens if you attempt to create one action method that picks only some values, 
-and then another without FormValue attribute that picks all the rest; when MVC framework faces 
-this situation and input values match the first, FormValue-decorated action method, it also 
-matches the one without decoration -> error. To fix this attributes must cover the whole set 
-of choices.
+2. There must be no ambiguity on selections or otherwise ASP.NET MVC will give you an error.
+   Usually this happens if you attempt to create one action method that picks only some values,
+   and then another without FormValue attribute that picks all the rest; when MVC framework faces
+   this situation and input values match the first, FormValue-decorated action method, it also
+   matches the one without decoration -> error. To fix this attributes must cover the whole set
+   of choices.
 
 Regardless of the shortcomings I still think this is yet another valuable tool to keep my controllers thin.
 
@@ -86,7 +85,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 
 /// <summary>
-/// Defines an action method selector that checks form values. If form item 
+/// Defines an action method selector that checks form values. If form item
 /// name and value matches, the action method is selected.
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
@@ -129,8 +128,8 @@ public sealed class FormValueAttribute : ActionMethodSelectorAttribute
     public string Name { get; set; }
 
     /// <summary>
-    /// Gets form item values. These are the values of the form item <see cref="Name"/> 
-    /// that should match in order this action method to be selected. 
+    /// Gets form item values. These are the values of the form item <see cref="Name"/>
+    /// that should match in order this action method to be selected.
     /// </summary>
     public IList<string> Values
     {
@@ -146,7 +145,7 @@ public sealed class FormValueAttribute : ActionMethodSelectorAttribute
     }
 
     /// <summary>
-    /// Checks whether the given controller action method is valid for execution based on 
+    /// Checks whether the given controller action method is valid for execution based on
     /// given form field <see cref="Name"/> and <see cref="Values"/>.
     /// </summary>
     /// <param name="controllerContext">Information about the controller.</param>
@@ -170,8 +169,8 @@ public sealed class FormValueAttribute : ActionMethodSelectorAttribute
 
         bool returnValue = false;
 
-        // The way of getting only the name without any prefixes might 
-        // be incorrect on some situation since there might be a hierarchy 
+        // The way of getting only the name without any prefixes might
+        // be incorrect on some situation since there might be a hierarchy
         // of values in the form Some.Other.Value
         ValueProviderResult result = controllerContext.Controller.ValueProvider.GetValue(this.Name);
 

@@ -2,8 +2,7 @@
 layout: post
 title: Selecting MVC action method based on the button clicked
 description: "Very common problem in form-heavy solutions is to be able to have one HTML form, but two different submit buttons for it. Learn the MVC way to do solve this."
-permalink: /blog/selecting-mvc-action-method-based-on-the-button-clicked
-modified: 
+modified:
 tags: [mvc, ASP.NET]
 comments: true
 share: true
@@ -13,8 +12,8 @@ Very common problem in form-heavy solutions is to be able to have one HTML form,
 
 ```html
 <div id="buttons">
-    <button name="Save">Save</button>
-    <button name="Delete">Delete</button>
+  <button name="Save">Save</button>
+  <button name="Delete">Delete</button>
 </div>
 ```
 
@@ -41,7 +40,7 @@ public ActionResult Delete(SampleModel model)
 }
 ```
 
-Of course you might want to use constants instead of magic strings for button names. Note, that in the above example the action method name is exactly the same "Edit" for both actions. The underlying ButtonAttribute for the action method selection is listed below, feel free to use it: 
+Of course you might want to use constants instead of magic strings for button names. Note, that in the above example the action method name is exactly the same "Edit" for both actions. The underlying ButtonAttribute for the action method selection is listed below, feel free to use it:
 
 ```csharp
 using System;
@@ -50,7 +49,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Web.Mvc;
 
 /// <summary>
-/// Declares a button attribute that selects action method to run. 
+/// Declares a button attribute that selects action method to run.
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 public sealed class ButtonAttribute : ActionMethodSelectorAttribute
@@ -73,7 +72,7 @@ public sealed class ButtonAttribute : ActionMethodSelectorAttribute
         if (names == null || names.Length == 0)
         {
             throw new ArgumentNullException(
-                "names", 
+                "names",
                 "Must specify at least one button name.");
         }
 
@@ -98,14 +97,14 @@ public sealed class ButtonAttribute : ActionMethodSelectorAttribute
     }
 
     /// <summary>
-    /// Checks whether the given controller action method is valid for execution 
+    /// Checks whether the given controller action method is valid for execution
     /// based on given button name.
     /// </summary>
     /// <param name="controllerContext">Controller  context.</param>
     /// <param name="methodInfo">Method context.</param>
     /// <returns>True if valid.</returns>
     public override bool IsValidForRequest(
-        ControllerContext controllerContext, 
+        ControllerContext controllerContext,
         System.Reflection.MethodInfo methodInfo)
     {
         if (controllerContext == null)

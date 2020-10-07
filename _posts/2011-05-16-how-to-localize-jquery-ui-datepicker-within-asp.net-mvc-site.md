@@ -2,7 +2,6 @@
 layout: post
 title: How-to localize jQuery UI Datepicker within ASP.NET MVC site
 description: "Make your jQuery UI Datepicker follow your server side culture."
-permalink: /blog/how-to-localize-jquery-ui-datepicker-within-asp.net-mvc-site
 modified:
 tags: [mvc, ASP.NET, javascript, jquery, localization]
 comments: true
@@ -28,22 +27,23 @@ to combine and minify scripts:
     .Render("~/Scripts/Site.#.js") %>
 ```
 
-Next you need to store language information somewhere for client side use. Good or 
+Next you need to store language information somewhere for client side use. Good or
 even best practice is to store that into HTML document root level with "lang" attribute:
 
 ```html
-<html lang="<%=System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName %>">
+<html
+  lang="<%=System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName %>"
+></html>
 ```
 
 Finally date picker needs to be told which language to use. This should be done on page load like this (note, that to set default language en-US you need to give an empty string):
 
 ```js
 $(function () {
-    // Current document language is at HTML root tag
-    var lang = $('html').attr("lang");
-    // Set datepicker language. 
-    $.datepicker.setDefaults(
-        $.datepicker.regional[lang === 'en' ? '' : lang]);
+  // Current document language is at HTML root tag
+  var lang = $("html").attr("lang");
+  // Set datepicker language.
+  $.datepicker.setDefaults($.datepicker.regional[lang === "en" ? "" : lang]);
 });
 ```
 

@@ -1,17 +1,30 @@
 {
   "hosting": {
-      "public": "_site",
-      "ignore": [
-          "firebase.json",
-          "**/.*",
-          "/_data/**",
-          "/_includes/**",
-          "/_layouts/**",
-          "/_posts/**",
-          "/_sass/**",
-          "/assets/**",
-          "/attachments/**",
-          "/images/**"
-      ]
+    "public": "_site",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "/_data/**",
+      "/_includes/**",
+      "/_layouts/**",
+      "/_posts/**",
+      "/_sass/**",
+      "/assets/**",
+      "/attachments/**",
+      "/images/**"
+    ],
+    "redirects": [
+      { "source": "/blog/:post*", "destination": "/:post", "type": 301 },
+      {
+        "source": "/blog/Blog-migrated-to-Github-pages",
+        "destination": "/blog-migrated-to-github-pages",
+        "type": 301
+      },
+      {
+        "source": "/The-Orchard-experience",
+        "destination": "/the-orchard-experience",
+        "type": 301
+      }
+    ]
   }
 }

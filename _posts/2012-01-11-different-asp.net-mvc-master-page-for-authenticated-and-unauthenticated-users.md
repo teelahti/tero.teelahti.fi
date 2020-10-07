@@ -2,7 +2,6 @@
 layout: post
 title: Different ASP.NET MVC master page for authenticated and unauthenticated users
 description: "Selecting master page dynamically."
-permalink: /blog/different-asp.net-mvc-master-page-for-authenticated-and-unauthenticated-users
 modified:
 tags: [ASP.NET, mvc]
 comments: true
@@ -14,9 +13,9 @@ I guess this is a common problem: you need to have different web site layout for
 ```csharp
 using System.Web.Mvc;
 /// <summary>
-/// A globally registered attribute to change view master 
-/// page based on whether user is authenticated or not. 
-/// Uses magic strings for the file names, could 
+/// A globally registered attribute to change view master
+/// page based on whether user is authenticated or not.
+/// Uses magic strings for the file names, could
 /// be changed to something more elegant.
 /// </summary>
 public sealed class SwitchMasterPageFilter : IActionFilter
@@ -33,8 +32,8 @@ public sealed class SwitchMasterPageFilter : IActionFilter
         {
             bool authenticated = filterContext.HttpContext
                              .User.Identity.IsAuthenticated;
-            result.MasterName = authenticated ? 
-                "~/Views/Shared/Site.master" 
+            result.MasterName = authenticated ?
+                "~/Views/Shared/Site.master"
               : "~/Views/Shared/SiteUnauthenticated.master";
         }
     }
