@@ -8,7 +8,7 @@ jobs:
   build:
     strategy:
       matrix:
-        jekyll-image: "jekyll/builder:4.1.0"
+        jekyll-image: ["jekyll/builder:4.1.0"]
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
