@@ -26,10 +26,28 @@
   },
   "work": [
     {
+      "company": "Next Games - a Netflix game studio",
+      "position": "Chief Technology Officer",
+      "website": "https://nextgames.com",
+      "startDate": "2021-06-01",
+      "highlights": [],
+      "summary": "Leading game development, Next Games' unified gaming platform, and IT functions. Member of the management team. Participated in Netflix's acquisition of Next Games."
+    },
+    {
+      "company": "Next Games - a Netflix game studio",
+      "position": "Technology Director",
+      "website": "https://nextgames.com",
+      "startDate": "2020-10-01",
+      "endDate": "2021-06-01",
+      "highlights": [],
+      "summary": "Leading all in-house game and game platform development. Product owner for Next Games's unified gaming platform."
+    },
+    {
       "company": "Armada Interactive",
       "position": "CEO, co-founder",
       "website": "https://armadainteractive.com",
       "startDate": "2018-03-01",
+      "endDate": "2020-10-01",
       "highlights": [],
       "endDate": "",
       "summary": "After a failed game took over the CEO role to streamline company back to rapid development mode. In addition to the CEO role I'm still actively involved in developmemt."
@@ -113,27 +131,70 @@
     {
       "name": "Cloud Computing",
       "level": "",
-      "keywords": [ "Kubernetes", "Azure", "Google Cloud Platform", "AWS", "SaaS" ]
+      "keywords": [
+        "Kubernetes",
+        "Azure",
+        "Google Cloud Platform",
+        "AWS",
+        "SaaS"
+      ]
     },
     {
       "name": "Software Architecture",
       "level": "",
-      "keywords": [ "Solution architecture", "Distributed systems", "Messaging", "SOA", "Microservices", "Continuous Integration", "Continuous Deployment", "Test Automation" ]
+      "keywords": [
+        "Solution architecture",
+        "Distributed systems",
+        "Messaging",
+        "SOA",
+        "Microservices",
+        "Continuous Integration",
+        "Continuous Deployment",
+        "Test Automation"
+      ]
     },
     {
       "name": "Software Development",
       "level": "",
-      "keywords": ["Developer Coaching", "Agile Methodologies", "Offshoring", "Vendor Management", "Consulting", "Performance Tuning", ".NET", "C#", "Go", "Python", "Docker", "git"]
+      "keywords": [
+        "Developer Coaching",
+        "Agile Methodologies",
+        "Offshoring",
+        "Vendor Management",
+        "Consulting",
+        "Performance Tuning",
+        ".NET",
+        "C#",
+        "Go",
+        "Python",
+        "Docker",
+        "git"
+      ]
     },
     {
       "name": "Web Development",
       "level": "",
-      "keywords": ["JavaScript", "HTML", "CSS", "React", "Redux", "NodeJS", "ASP.NET"]
+      "keywords": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Redux",
+        "NodeJS",
+        "ASP.NET"
+      ]
     },
     {
       "name": "Databases",
       "level": "",
-      "keywords": [ "Google Cloud Datastore", "Redis", "SQL Server", "Azure DocumentDB", "Azure Table Storage", "RavenDB"]
+      "keywords": [
+        "Google Cloud Datastore",
+        "Redis",
+        "SQL Server",
+        "Azure DocumentDB",
+        "Azure Table Storage",
+        "RavenDB"
+      ]
     },
     {
       "name": "Public Speaking",
