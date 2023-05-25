@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Fix permissions
         uses: docker://jekyll/builder:4.1.0
@@ -23,7 +23,7 @@ jobs:
           args: jekyll build
 
       - name: Archive built site
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: site
           path: _site
@@ -34,10 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: site
           path: _site
@@ -47,4 +47,4 @@ jobs:
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
