@@ -29,7 +29,7 @@ linkedin_username: teroteelahti
 logo: /images/TT-monogram.png
 disqus:
   shortname: teelahtifi
-google_analytics: UA-21701635-1
+# google_analytics: UA-21701635-1
 
 # Build settings
 markdown: kramdown
