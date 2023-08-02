@@ -4,18 +4,13 @@
     "label": "Experienced software architect & CTO",
     "phone": "+358 40 562 2455",
     "email": "tero@teelahti.fi",
-    "website": "http://tero.teelahti.fi",
+    "website": "https://tero.teelahti.fi",
     "summary": "",
     "profiles": [
       {
         "network": "Github",
         "username": "teelahti",
         "url": "https://github.com/teelahti"
-      },
-      {
-        "network": "Twitter",
-        "username": "teelahti",
-        "url": "https://twitter.com/teelahti"
       },
       {
         "network": "Linkedin",
@@ -25,6 +20,14 @@
     ]
   },
   "work": [
+    {
+      "company": "Next Games - a Netflix game studio",
+      "position": "Studio Technology Director",
+      "website": "https://nextgames.com",
+      "startDate": "2023-06-01",
+      "highlights": [],
+      "summary": "Leading game development, Next Games' unified gaming platform, and IT functions. Member of the management team. Working closely together with the global Netflix gaming organization."
+    },
     {
       "company": "Next Games - a Netflix game studio",
       "position": "Chief Technology Officer",

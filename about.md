@@ -12,7 +12,7 @@ author:
 
 ## Tech leader & Solution developer/Architect
 
-Over 23 years of experience in professional software development. Currently
+Over 25 years of experience in professional software development. Currently
 leading Next Games's development, IT and unified gaming platforms. We are a
 Netflix internal game studio.
 
