@@ -14,7 +14,7 @@ run:
 	jekyll serve
 	
 build:
-	# docker run --rm  --volume="$(PWD):/srv/jekyll" -it jekyll/builder:4.1.0 jekyll build
+	# docker run --rm  --volume="$(PWD):/srv/jekyll" -it jekyll/builder:4 jekyll build
 	jekyll build
 	
 deploy: build
