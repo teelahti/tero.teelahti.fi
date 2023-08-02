@@ -21,9 +21,9 @@ baseurl: # the optional subpath of your site, e.g. "/blog"
 url: https://tero.teelahti.fi
 author:
   name: Tero Teelahti
-  twitter: teelahti
+  # twitter: teelahti
   picture: tero-teelahti-avatar.jpg
-twitter_username: teelahti
+# twitter_username: teelahti
 github_username: teelahti
 linkedin_username: teroteelahti
 logo: /images/TT-monogram.png
