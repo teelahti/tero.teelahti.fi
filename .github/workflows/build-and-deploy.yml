@@ -27,18 +27,6 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      # Old build:
-      # - name: Fix permissions
-      #   uses: docker://jekyll/builder:4.2.2
-      #   with:
-      #     entrypoint: "/bin/chown"
-      #     args: -R jekyll:jekyll .
-
-      # - name: Build site
-      #   uses: docker://jekyll/builder:4.2.2
-      #   with:
-      #     args: jekyll build
-
       - name: Archive built site
         uses: actions/upload-artifact@v3
         with:
