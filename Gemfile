@@ -6,3 +6,4 @@ source "https://rubygems.org"
 # gem-based
 gem "jekyll"
 gem "jekyll-theme-basically-basic"
+gem "webrick"
