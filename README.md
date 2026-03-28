@@ -1,21 +1,30 @@
 # tero.teelahti.fi
 
-tero.teelahti.fi blog hosted on Google Firebase hosting. Originally forked from
-mmistakes/jekyll-theme-basically-basic. Credits to [Manymistakes](http://mademistakes.com)
-for the original design & Jekyll integration.
-
-Could easily be hosted on Github pages by changing theme and gem lines on Gemfile and \_config.yml;
-check comments on those files.
+Personal blog hosted on Google Firebase Hosting. Built with [Hugo](https://gohugo.io/)
+using the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme.
 
 ## Local development
 
-See Makefile.
+Requires [Nix](https://nixos.org/) with flakes enabled. If you use
+[direnv](https://direnv.net/), run `direnv allow` and Hugo will be available
+automatically.
 
-## Deploy to firebase
+```sh
+# Enter dev shell (if not using direnv)
+nix develop
 
-Deployment is done with Github actions on each push, see .github folder for details. To set this
-up create a CI token with `firebase login:ci`, save the output to Github secret FIREBASE_TOKEN.
+# Start local dev server at http://localhost:1313
+make run
 
-To build and deploy locally for test purposes do
+# Build the site
+make build
+```
+
+## Deploy
+
+Deployment is done automatically with GitHub Actions on each push to `master`.
+See `.github/workflows/build-and-deploy.yml` for details.
+
+To build and deploy locally:
 
     make deploy

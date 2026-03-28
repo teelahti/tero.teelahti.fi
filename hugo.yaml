@@ -1,0 +1,113 @@
+baseURL: "https://tero.teelahti.fi/"
+title: "Tero Teelahti"
+theme: PaperMod
+languageCode: en-US
+publishDir: _site
+pagination:
+  pagerSize: 100
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# Use :slug to preserve Jekyll URL slugs (derived from filenames, not titles)
+permalinks:
+  posts: "/:slug/"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: "Tero Teelahti"
+  description: >-
+    Tero Teelahti's personal blog (archive). Mostly development posts with a
+    slight web or gaming focus.
+  author: "Tero Teelahti"
+  images: ["/images/TT-monogram.png"]
+  DateFormat: "January 2, 2006"
+
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    disableHLJS: true
+    favicon: "/favicon.ico"
+
+  label:
+    text: "Tero Teelahti"
+    icon: /images/TT-monogram.png
+    iconHeight: 35
+
+  homeInfoParams:
+    Title: "Tero Teelahti's ramblings"
+    Content: >-
+      *Experienced tech leader and cloud architect with games and web focus.
+      North and South pole skier. Technology enthusiast.*
+
+
+      I've not been active on this blog lately, but kept the writings as an
+      archive. Find out [who I am](/about/) or check any of the social links
+      below.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/teelahti"
+    - name: linkedin
+      url: "https://linkedin.com/in/teroteelahti"
+    - name: email
+      url: "mailto:tero@teelahti.fi"
+
+  cover:
+    hiddenInList: true
+    hiddenInSingle: true
+
+menu:
+  main:
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    noClasses: false
+    style: monokai

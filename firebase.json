@@ -1,28 +1,55 @@
 {
   "hosting": {
     "public": "_site",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "/_data/**",
-      "/_includes/**",
-      "/_layouts/**",
-      "/_posts/**",
-      "/_sass/**",
-      "/assets/**",
-      "/attachments/**",
-      "/images/**"
+    "ignore": ["firebase.json", "**/.*"],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "X-Frame-Options", "value": "DENY" },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          }
+        ]
+      }
     ],
     "redirects": [
       { "source": "/blog/:post*", "destination": "/:post", "type": 301 },
       {
-        "source": "/blog/Blog-migrated-to-Github-pages",
-        "destination": "/blog-migrated-to-github-pages",
+        "source": "/The-Orchard-experience",
+        "destination": "/the-orchard-experience/",
         "type": 301
       },
       {
-        "source": "/The-Orchard-experience",
-        "destination": "/the-orchard-experience",
+        "source": "/The-Orchard-experience/",
+        "destination": "/the-orchard-experience/",
+        "type": 301
+      },
+      {
+        "source": "/Blog-migrated-to-Github-pages",
+        "destination": "/blog-migrated-to-github-pages/",
+        "type": 301
+      },
+      {
+        "source": "/Blog-migrated-to-Github-pages/",
+        "destination": "/blog-migrated-to-github-pages/",
+        "type": 301
+      },
+      {
+        "source": "/cv/",
+        "destination": "/about/",
+        "type": 301
+      },
+      {
+        "source": "/cv",
+        "destination": "/about/",
+        "type": 301
+      },
+      {
+        "source": "/appharbor-first-impressions-and-gotchas-Copy/",
+        "destination": "/",
         "type": 301
       }
     ]

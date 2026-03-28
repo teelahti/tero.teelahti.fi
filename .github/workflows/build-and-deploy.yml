@@ -1,51 +1,27 @@
-# Builds the Jekyll site and deploys it to Firebase hosting
+# Builds the Hugo site and deploys it to Firebase hosting
 name: Deploy each push
 on:
   push:
     branches: [master]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        uses: actions/checkout@v4
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-      # - name: Setup Pages
-      #   id: pages
-      #   uses: actions/configure-pages@v3
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build 
-        env:
-          JEKYLL_ENV: production
+          submodules: true
+          fetch-depth: 1
 
-      - name: Archive built site
-        uses: actions/upload-artifact@v3
-        with:
-          name: site
-          path: _site
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v21
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+      - name: Nix cache
+        uses: DeterminateSystems/magic-nix-cache-action@v13
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: site
-          path: _site
+      - name: Build site
+        run: nix develop --command hugo --minify
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
